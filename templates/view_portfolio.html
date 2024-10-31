@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {% block title %}{{ portfolio.first_name }} {{
+portfolio.last_name }} - Portfolio{% endblock %} {% block content %}
+<div class="portfolio-container">
+  <!-- Profile Section -->
+  <div class="row profile-section">
+    <div class="col-md-4 text-center">
+      {% if portfolio.profile_pic %}
+      <img
+        src="{{ url_for('static', filename='images/' + portfolio.profile_pic) }}"
+        class="profile-img"
+        alt="Profile Picture"
+      />
+      {% else %}
+      <img
+        src="{{ url_for('static', filename='images/default_profile.png') }}"
+        class="profile-img"
+        alt="Default Profile Picture"
+      />
+      {% endif %}
+    </div>
+    <div class="col-md-8">
+      <h1>{{ portfolio.first_name }} {{ portfolio.last_name }}</h1>
+      <h3>{{ portfolio.position or 'Your Profession' }}</h3>
+      <p>
+        Email: <a href="mailto:{{ portfolio.email }}">{{ portfolio.email }}</a>
+      </p>
+      <p class="location">
+        {{ portfolio.location or 'Location not provided' }}
+      </p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="section about-section">
+    <h2>About Me</h2>
+    <p>{{ portfolio.about }}</p>
+  </div>
+
+  <!-- Education Section -->
+  <div class="section education-section">
+    <h2>Education</h2>
+    <ul class="education-list">
+      <li>
+        <h4>{{ portfolio.degree }}</h4>
+        <p>
+          {{ portfolio.school }} <br />
+          <span class="education-details"
+            >Grade: {{ portfolio.grade }} | Year Completed: {{
+            portfolio.year_completed }}</span
+          >
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="section experience-section">
+    <h2>Experience</h2>
+    <ul class="experience-list">
+      <li>
+        <strong>{{ portfolio.position }}</strong> <br />
+        {{ portfolio.company }} <br />
+        <span class="experience-duration"
+          >{{ portfolio.years_of_experience }}</span
+        >
+        <p class="experience-description">{{ portfolio.responsibilities }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="section skills-section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      {% if portfolio.skills %} {% set skills = portfolio.skills.split(',') %}
+      {% for skill in skills %}
+      <span class="badge skill-badge">{{ skill.strip() }}</span>
+      {% endfor %} {% else %}
+      <p>No skills provided.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="section projects-section">
+    <h2>Projects</h2>
+    <p>{{ portfolio.projects }}</p>
+  </div>
+
+  <!-- Button to trigger the browser's Print as PDF functionality -->
+  <button class="btn btn-download" onclick="window.print();">
+    Download as PDF
+  </button>
+</div>
+{% endblock %}

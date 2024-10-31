@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block title %}Home - Portfolio Manager{% endblock
+%} {% block content %}
+<div class="jumbotron text-center">
+  <h1 class="display-4">Welcome to the Portfolio Manager!</h1>
+  <p class="lead">Create and showcase your professional portfolio with ease.</p>
+  <hr class="my-4" />
+
+  {% if not session.get('user_id') %}
+  <p>Please login or signup to start creating your portfolio.</p>
+  <a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
+  <a class="btn btn-secondary btn-lg" href="/signup" role="button">Signup</a>
+  {% else %} {% if not session.get('portfolio_created') %}
+  <a class="btn btn-success btn-lg" href="/create-portfolio" role="button"
+    >Create Portfolio</a
+  >
+  {% else %}
+  <a class="btn btn-info btn-lg" href="/view-portfolio" role="button"
+    >View Portfolio</a
+  >
+  <a class="btn btn-warning btn-lg" href="/edit-portfolio" role="button"
+    >Edit Portfolio</a
+  >
+  {% endif %}
+  <a class="btn btn-danger btn-lg" href="/contact-me" role="button"
+    >Contact Me</a
+  >
+  {% endif %}
+</div>
+{% endblock %}

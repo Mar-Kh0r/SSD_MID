@@ -1,0 +1,491 @@
+/* Custom styles for Portfolio Manager */
+.author-card {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: auto;
+  max-width: 200px;
+}
+
+/* Table and Form Styles */
+th,
+td:last-child {
+  text-align: center;
+}
+
+/* Navbar Custom Styles */
+.custom-navbar {
+  background-color: #343a40;
+  padding: 15px;
+}
+
+.custom-navbar-brand {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.custom-nav-link {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.custom-nav-link:hover {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+.custom-toggler {
+  border-color: #f1c40f;
+}
+
+/* Custom Button Styles */
+.custom-button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.custom-button:hover {
+  background-color: #218838;
+  color: #fff;
+}
+
+/* General Body Style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+/* Form and Input Field Styles */
+.form-control {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+textarea.form-control {
+  height: 150px;
+}
+
+/* Headings for Portfolio */
+h2,
+h3 {
+  color: #007bff;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Portfolio View Section */
+.portfolio-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.portfolio-section h3 {
+  margin-top: 20px;
+  color: #17a2b8;
+}
+
+.portfolio-section p {
+  margin-top: 10px;
+}
+
+/* Error Pages */
+.error-message {
+  margin-top: 100px;
+  font-size: 1.5rem;
+}
+
+.error-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Contact Me Page */
+.contact-form {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #28a745;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 30px;
+    padding: 15px;
+  }
+
+  .custom-nav-link {
+    margin-right: 10px;
+  }
+
+  .portfolio-section,
+  .contact-form {
+    padding: 15px;
+  }
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image Styling */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Button for Downloading CV */
+.btn-download {
+  background-color: #ffeb3b;
+  color: #004445;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-download:hover {
+  background-color: #e0c500;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: #ffeb3b;
+}
+
+/* Profile Section */
+.profile-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 20px;
+}
+
+.profile-img-wrapper {
+  flex: 1;
+}
+
+.profile-details {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.profile-details h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #007bff;
+}
+
+.profile-details h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.profile-details p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Sections */
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.section p,
+.section h4 {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.education-item,
+.experience-item {
+  padding: 10px 0;
+}
+
+.education-item h4,
+.experience-item h4 {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Button for Downloading PDF */
+.btn-download {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-download:hover {
+  background-color: #0056b3;
+}
+
+/* Print Styles */
+@media print {
+  nav,
+  .btn-download {
+    display: none; /* Hide unnecessary elements */
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .profile-header,
+  .section {
+    page-break-inside: avoid;
+  }
+
+  .portfolio-container {
+    box-shadow: none;
+    border: none;
+  }
+}
+/* Skills Section */
+.skills-list {
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+}
+
+.skills-list li {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+/* General Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+.profile-section {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: #007bff;
+}
+
+h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 1rem;
+  color: #888;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Sections */
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Education Section */
+.education-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.education-details {
+  font-style: italic;
+  color: #888;
+}
+
+/* Experience Section */
+.experience-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.experience-duration {
+  font-style: italic;
+  color: #888;
+  margin-top: 5px;
+}
+
+.experience-description {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-badge {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+/* Projects Section */
+.projects-section p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Download Button */
+.btn-download {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-download:hover {
+  background-color: #0056b3;
+}
+
+/* Print Styles */
+@media print {
+  nav,
+  .btn-download {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .profile-section,
+  .section {
+    page-break-inside: avoid;
+  }
+
+  .portfolio-container {
+    box-shadow: none;
+    border: none;
+  }
+}

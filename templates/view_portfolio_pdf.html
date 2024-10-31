@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio PDF</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h2 {
+        font-size: 1.5rem;
+        color: #333;
+      }
+      .portfolio-container {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .profile-section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .profile-img {
+        width: 150px;
+        border-radius: 50%;
+      }
+      h3 {
+        font-size: 1.25rem;
+        color: #333;
+      }
+      .about-section,
+      .interests-education-section {
+        margin-top: 20px;
+      }
+      .interests,
+      .education {
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="portfolio-container">
+      <div class="profile-section">
+        {% if portfolio.profile_pic %}
+        <img
+          src="{{ url_for('static', filename='images/' + portfolio.profile_pic) }}"
+          class="profile-img"
+          alt="Profile Picture"
+        />
+        {% else %}
+        <img
+          src="{{ url_for('static', filename='images/default_profile.png') }}"
+          class="profile-img"
+          alt="Default Profile Picture"
+        />
+        {% endif %}
+        <h3>{{ portfolio.first_name }} {{ portfolio.last_name }}</h3>
+        <h5>Chief Scientist</h5>
+        <p>OpenAI</p>
+      </div>
+
+      <div class="about-section">
+        <h2>About Me</h2>
+        <p>{{ portfolio.about }}</p>
+      </div>
+
+      <div class="interests-education-section">
+        <div class="interests">
+          <h2>Interests</h2>
+          <ul>
+            <li>Artificial Intelligence</li>
+            <li>Computational Linguistics</li>
+            <li>Information Retrieval</li>
+          </ul>
+        </div>
+        <div class="education">
+          <h2>Education</h2>
+          <p>PhD Artificial Intelligence, Stanford University</p>
+          <p>MEng Artificial Intelligence, MIT</p>
+          <p>BSc Artificial Intelligence, MIT</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

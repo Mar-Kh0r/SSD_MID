@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% block title %}Create Portfolio{% endblock %} {%
+block content %}
+<h2>Create Your Portfolio</h2>
+<form method="POST" action="/create-portfolio" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+
+  <!-- Personal Information -->
+  <div class="form-group">
+    {{ form.first_name.label }} {{ form.first_name(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.last_name.label }} {{ form.last_name(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.email.label }} {{ form.email(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.about.label }} {{ form.about(class="form-control") }}
+  </div>
+
+  <!-- Education Information -->
+  <h3>Education</h3>
+  <div class="form-group">
+    {{ form.school.label }} {{ form.school(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.degree.label }} {{ form.degree(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.grade.label }} {{ form.grade(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.year_completed.label }} {{ form.year_completed(class="form-control")
+    }}
+  </div>
+
+  <!-- Experience Information -->
+  <h3>Experience</h3>
+  <div class="form-group">
+    {{ form.company.label }} {{ form.company(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.position.label }} {{ form.position(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.years_of_experience.label }} {{
+    form.years_of_experience(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.responsibilities.label }} {{
+    form.responsibilities(class="form-control") }}
+  </div>
+
+  <!-- Projects -->
+  <div class="form-group">
+    {{ form.projects.label }} {{ form.projects(class="form-control") }}
+  </div>
+
+  <!-- Skills -->
+  <h3>Skills</h3>
+  <div class="form-group">
+    {{ form.skills.label }} {{ form.skills(class="form-control") }}
+    <small class="form-text text-muted"
+      >Enter skills separated by commas.</small
+    >
+  </div>
+
+  <!-- Profile Picture -->
+  <div class="form-group">
+    {{ form.profile_pic.label }} {{ form.profile_pic(class="form-control-file")
+    }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Create Portfolio</button>
+</form>
+{% endblock %}
